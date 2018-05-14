@@ -1,0 +1,18 @@
+<html>
+     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <input type="text" placeholder="Ingredient:"/>
+        <input type="number" placeholder="Amount:" onchange="checkVal(this);"/>
+    </body>
+    <script>
+        function checkVal(amount)
+        {
+            if ($(amount).val() < 0) {
+               $(amount).val(0)
+            }
+            debugger        
+        };
+    </script>
+</html>
