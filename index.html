@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="js/app.js">
-        </script>
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="js/app.js" defer></script>
     </head>
     <body>
-        <header>
+        <header id="big-head" class="major">
             <h1>[dishlistr]</h1>
         </header>
 
-        <form>
+        <form class="major">
             <label for="dish-name">Dish Name</label>
             <input type="text" id="dish-name" name="dish-name">
             <label for="dish-mealtime">Choose a mealtime</label>
@@ -19,14 +19,16 @@
                 <option value="lunch">Lunch</option>
                 <option value="dinner">Dinner</option>
             </select>
-            <form id="ingredient-form">
-                <label for="ingredients">Enter the ingredients</label>  
-                <input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:"><br>
-                <label for="ingredient-amount">And the amount</label>
-                <input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">
-                <button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>
-                <button type="button" class="btn remove" onclick ="delIngredient()">Remove Ingredient</button><br>
-            </form>
+            <div id="ingredients">
+                <div class="ingredient-input">
+                    <label for="ingredients">Enter the ingredients</label>  
+                    <input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:"><br>
+                    <label for="ingredient-amount">And the amount</label>
+                    <input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">
+                    <button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>
+                    <button type="button" class="btn remove" onclick ="delIngredient()">Remove Ingredient</button><br>
+                </div>
+            </div>
         </form>
     </body>
 </html>
