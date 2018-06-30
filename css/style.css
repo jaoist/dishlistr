@@ -1,0 +1,30 @@
+
+
+.test-outline{
+    border: 1em solid;
+    border-color: aqua;
+}
+
+header {
+    width: auto;
+}
+
+#ingredients{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.stack * {
+    display: block;
+    width: 100%;
+}
+
+.stack button{
+    background-color: red;
+}
+
+input {
+    box-sizing:border-box
+} 

@@ -21,12 +21,15 @@ function addIngredient (){
     allow it to be targeted later. 
     */
 
-    var fragment = create('<label for="ingredients">Enter the ingredients</label>'+
-    '<input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:"><br>'
-    +'<label for="ingredient-amount">And the amount</label>'
-    +'<input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">'
-    +'<button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>'
-    +'<button type="button" class="btn remove" onclick ="delIngredient()">Remove Ingredient</button><br>');
+    var fragment = create('<div class="ingredient-input">'+
+                            '<div class="stack">'+
+                            '<input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:">'+
+                            '<input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">'+
+                            '</div>'+
+                            '<div class="stack">'+
+                            '<button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>'+
+                            '<button type="button" class="btn remove" onclick ="delIngredient()">Remove Ingredient</button>'+
+                            '</div>');
     
     var div = document.createElement("div")
     div.classList.add("ingredient-input")
