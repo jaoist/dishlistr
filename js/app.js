@@ -1,9 +1,5 @@
 
-
-
-
-//--- I stole this from Stack Overflow
-function create(htmlStr) {
+function createFrag(htmlStr) {
     var frag = document.createDocumentFragment(),
         temp = document.createElement('div');
     temp.innerHTML = htmlStr;
@@ -21,14 +17,14 @@ function addIngredient (){
     allow it to be targeted later. 
     */
 
-    var fragment = create('<div class="ingredient-input">'+
+    var fragment = createFrag('<div class="ingredient-input">'+
                             '<div class="stack">'+
                             '<input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:">'+
                             '<input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">'+
                             '</div>'+
                             '<div class="stack">'+
                             '<button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>'+
-                            '<button type="button" class="btn remove" onclick ="delIngredient()">Remove Ingredient</button>'+
+                            '<button type="button" class="btn remove" onclick ="delIngredient(this)">Remove Ingredient</button>'+
                             '</div>');
     
     var div = document.createElement("div")
@@ -37,14 +33,14 @@ function addIngredient (){
     document.getElementById('ingredients').appendChild(div);
 }
 
-function delIngredient(){
-    var i = 0;
-    while( (child = child.previousSibling) != null ){
-    i++;}
-    console.log(i);
+function delIngredient(target){
+    target.parentNode.parentNode.remove();
+    
+    //var e = document.querySelector("div.ingredient-input");
+    //e.parentNode.removeChild(e);
 }
 
-//--- Stop default behavior on add buttons.
+//--- Create event listener, stop default behavior on add buttons.
 
 var addButtons = document.getElementsByClassName('btn add');
 
@@ -55,5 +51,12 @@ for (var i = 0; i < addButtons.length; i++){
         });
     }
 
-var elemTest = document.getElementById('ingredients');
-console.log(elemTest);
+//--- Create event listener, stop default behavior on del buttons.
+var delButtons = document.getElementsByClassName('btn del')
+
+for (var i = 0; i < delButtons.length; i++){
+        delButtons[i].addEventListener('click', 
+        function(event){
+            console.log(this.parentElement.parentElement)
+        })    
+    }
