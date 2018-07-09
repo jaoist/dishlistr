@@ -5,21 +5,23 @@
         <script type="text/javascript" src="js/app.js" defer></script>
     </head>
     <body>
-        <header class="test-outline">
+        <header>
             <h1>[dishlistr]</h1>
         </header>
 
         <form id="name-form">
-            <label for="dish-name">Dish Name</label>
-            <input type="text" id="dish-name" name="dish-name">
-            <label for="dish-mealtime">Choose a mealtime</label>
-            <select id="dish-mealtime" name="dish-mealtime">
-                <option value="breakfast">Breakfast</option>
-                <option value="brunch">Brunch</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-            </select>
-            <div id="ingredients">
+            <div id="dish-init" class="group">
+                <label for="dish-name">Dish Name</label>
+                <input type="text" id="dish-name" name="dish-name">
+                <label for="dish-mealtime">Choose a mealtime</label>
+                <select id="dish-mealtime" name="dish-mealtime">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+            <div id="ingredients" class="group">
                 <div class="ingredient-input">
                     <div class="stack">
                         <input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:">
@@ -30,6 +32,14 @@
                         <button type="button" class="btn del" onclick ="delIngredient(this)">Remove Ingredient</button>
                     </div>
                 </div>
+            </div>
+            <div class="group">
+                <textarea>
+
+                </textarea>
+                <button type="submit">
+                    Record Recipe
+                </button>
             </div>
         </form>
     </body>

@@ -1,12 +1,9 @@
-
-
-.test-outline{
-    border: 1em solid;
-    border-color: aqua;
-}
-
 header {
     width: auto;
+}
+
+#name-form{
+    margin: 10px 10px 5px 5px;
 }
 
 #ingredients{
@@ -23,6 +20,14 @@ header {
 
 .stack button{
     background-color: red;
+}
+
+.group{
+    margin: 10px 10px 5px 5px;
+    border: 10px solid lightblue;
+    border-radius: 8px;
+    padding: 2% 2% 2% 2%;
+    background-color: whitesmoke;
 }
 
 input {
