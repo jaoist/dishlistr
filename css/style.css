@@ -38,10 +38,10 @@ header {
 
 .group{
     margin: 10px 10px 5px 5px;
-    border: 10px solid lightblue;
+    border: 5px solid black;
     border-radius: 8px;
     padding: 2% 2% 2% 2%;
-    background-color: whitesmoke;
+    background-color: rgb(232, 219, 215);
 }
 
 .flex{
