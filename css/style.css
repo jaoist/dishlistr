@@ -44,6 +44,10 @@ header {
     background-color: whitesmoke;
 }
 
+.flex{
+    display: flex;
+}
+
 .align-area{
     display: inline-block;
     width: 48%;
@@ -51,8 +55,10 @@ header {
     text-align: center;
 }
 
-.right{
-  width: 25%;
+.add-box{
+    flex: 0 0 75px;
+    margin-left: auto;
+    padding: 10px;
 }
 
 input {

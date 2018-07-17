@@ -21,7 +21,7 @@
                     <option value="dinner">Dinner</option>
                 </select>
             </div>
-            <div class="group">
+            <div class="flex group">
                 <div class="ingredients">
                     <div class="ingredient-input">
                         <div class="stack">
@@ -30,7 +30,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn add right" onclick="return addIngredient()">Add More Ingredients</button>
+                <div class="add-box">
+                    <button type="button" id="add-ingredient" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>
+                </div>
             </div>
             <div class= "group">
                 <div class="align-area">
