@@ -11,24 +11,22 @@ function createFrag(htmlStr) {
 
 function addIngredient (){
 
-    var fragment = createFrag('<div class="ingredient-input">'+
-                            '<div class="stack">'+
-                            '<input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:">'+
-                            '<input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">'+
-                            '</div>'+
-                            '<div class="stack">'+
-                            '<button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>'+
+    var fragment = createFrag('<div class="stack">'+
+                            '<input type="text" class="ingredient" name="ingredients" placeholder="Ingredient:">'+
+                            '<input type="number" class="amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">'+
+                            '<div class="del-container">'+
                             '<button type="button" class="btn remove" onclick ="delIngredient(this)">Remove Ingredient</button>'+
+                            '</div>'+
                             '</div>');
     
     var div = document.createElement("div")
     div.classList.add("ingredient-input")
     div.appendChild(fragment)
-    document.getElementById('ingredients').appendChild(div);
+    document.getElementsByClassName('ingredients')[0].appendChild(div);
 }
 
 function delIngredient(target){
-    target.parentNode.parentNode.remove();
+    target.parentNode.parentNode.parentNode.remove();
 }
 
 //--- Create event listener, stop default behavior on add buttons.

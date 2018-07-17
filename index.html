@@ -21,25 +21,28 @@
                     <option value="dinner">Dinner</option>
                 </select>
             </div>
-            <div id="ingredients" class="group">
-                <div class="ingredient-input">
-                    <div class="stack">
-                        <input type="text" id="ingredients" name="ingredients" placeholder="Ingredient:">
-                        <input type="number" id="ingredient-amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">
-                    </div>
-                    <div class="stack">
-                        <button type="button" class="btn add" onclick="return addIngredient()">Add More Ingredients</button>
-                        <button type="button" class="btn del" onclick ="delIngredient(this)">Remove Ingredient</button>
+            <div class="group">
+                <div class="ingredients">
+                    <div class="ingredient-input">
+                        <div class="stack">
+                            <input type="text" class="ingredient" name="ingredients" placeholder="Ingredient:">
+                            <input type="number" class="amount" name="ingredient-amount" placeholder="Amount:" onchange="checkVal(this);">
+                        </div>
                     </div>
                 </div>
+                <button type="button" class="btn add right" onclick="return addIngredient()">Add More Ingredients</button>
             </div>
-            <div class="group">
-                <textarea>
+            <div class= "group">
+                <div class="align-area">
+                    <textarea>
 
-                </textarea>
-                <button type="submit">
-                    Record Recipe
-                </button>
+                    </textarea>
+                </div>
+                <div class="align-area">
+                    <button id="record" type="button">
+                        Record Recipe
+                    </button>
+                </div>
             </div>
         </form>
     </body>

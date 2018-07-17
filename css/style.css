@@ -6,16 +6,30 @@ header {
     margin: 10px 10px 5px 5px;
 }
 
-#ingredients{
+.ingredients{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ingredient{
+    width: 50%;
+    margin: 0 10px 5px 0;
+}
+
+.amount{
+    width: 15%;
+    margin: 0 10px 5px 0;    
+}
+
+.stack{
+    display: flex;
     justify-content: flex-start;
 }
 
 .stack * {
     display: block;
-    width: 100%;
 }
 
 .stack button{
@@ -30,6 +44,17 @@ header {
     background-color: whitesmoke;
 }
 
+.align-area{
+    display: inline-block;
+    width: 48%;
+    margin-left: 1%;
+    text-align: center;
+}
+
+.right{
+  width: 25%;
+}
+
 input {
-    box-sizing:border-box
+    box-sizing:border-box;
 } 
