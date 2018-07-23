@@ -111,9 +111,9 @@ that contains should open and close the nav (.icon) */
     }
   }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user 
-clicks on the icon. This class makes the topnav look good on small screens 
-(display the links vertically instead of horizontally) */
+/* The "responsive" class is added to nav when the menu
+icon is clicked. This class makes the nav display the links vertically 
+instead of horizontally. */
 
 @media screen and (max-width: 500px) {
     .nav.responsive {position: relative;}
