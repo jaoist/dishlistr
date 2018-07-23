@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <!-- Load icon library from font-awesome for hamburger menu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="js/app.js" defer></script>
+        
     </head>
     <body>
         <header>
             <h1>[dishlistr]</h1>
+            <div class="nav" id="main-nav">
+                <a href="#recipies" class="active">Recipies</a>
+                <a href="#planner">Planner</a>
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </header>
 
         <form id="name-form">

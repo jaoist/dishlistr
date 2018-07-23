@@ -1,3 +1,14 @@
+// Nav behavior.
+
+function expandMenu() {
+    var x = document.getElementById("main-nav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+
 
 function createFrag(htmlStr) {
     var frag = document.createDocumentFragment(),
