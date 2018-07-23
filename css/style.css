@@ -1,4 +1,5 @@
-/* Responsive Navigation */
+/* Navigation */
+
 
 .nav{
     overflow: hidden;
@@ -19,13 +20,11 @@
     background-color: #ddd;
 }
 
-.active{
-    background-color: #444FE2
-}
-
 .nav .icon {
     display: none;
 }
+
+/* Form */
 
 #name-form{
     margin: 10px 10px 5px 5px;
@@ -99,17 +98,24 @@ textarea {
 
 /* Media Queries*/
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .nav a:not(:first-child) {display: none;}
+/* When the screen is less than 500 pixels wide, hide all links. Show the link
+that contains should open and close the nav (.icon) */
+
+@media screen and (max-width: 500px) {
+    .nav a {
+        display: none;
+    }
     .nav a.icon {
       float: right;
       display: block;
     }
   }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+/* The "responsive" class is added to the topnav with JavaScript when the user 
+clicks on the icon. This class makes the topnav look good on small screens 
+(display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 500px) {
     .nav.responsive {position: relative;}
     .nav.responsive a.icon {
       position: absolute;
