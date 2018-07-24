@@ -24,16 +24,20 @@
         </header>
 
         <form id="name-form">
-            <div id="dish-init" class="group">
-                <label for="dish-name">Dish Name</label>
-                <input type="text" id="dish-name" name="dish-name">
-                <label for="dish-mealtime">Choose a mealtime</label>
-                <select id="dish-mealtime" name="dish-mealtime">
-                    <option value="breakfast">Breakfast</option>
-                    <option value="brunch">Brunch</option>
-                    <option value="lunch">Lunch</option>
-                    <option value="dinner">Dinner</option>
-                </select>
+            <div class="group namedish">
+                <div>
+                    <label for="dish-name">Dish Name</label>
+                    <input type="text" id="dish-name" name="dish-name">
+                </div>
+                <div>
+                    <label for="dish-mealtime">Choose a mealtime</label>
+                    <select id="dish-mealtime" name="dish-mealtime">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="brunch">Brunch</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                    </select>
+                </div>
             </div>
             <div class="flex group">
                 <div class="ingredients">
@@ -50,9 +54,7 @@
             </div>
             <div class= "group">
                 <div class="align-area">
-                    <textarea>
-
-                    </textarea>
+                    <textarea placeholder="Write down your recipie directions right here!"></textarea>
                 </div>
                 <div class="align-area">
                     <button id="record" type="button">

@@ -30,7 +30,9 @@
     margin: 10px 10px 5px 5px;
 }
 
+
 .ingredients{
+    /* Flexbox ftw */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -90,12 +92,17 @@ input {
 } 
 
 textarea {
+    /* Let's not make the input area too small */
     min-width: 85%;
     max-width: 95%;
     min-height: 150px;
     outline: none;
 }
 
+
+.namedish div {
+    display: inline;
+}
 /* Media Queries*/
 
 /* When the screen is less than 500 pixels wide, hide all links. Show the link
@@ -110,6 +117,7 @@ that contains should open and close the nav (.icon) */
       display: block;
     }
   }
+
 
 /* The "responsive" class is added to nav when the menu
 icon is clicked. This class makes the nav display the links vertically 
@@ -127,4 +135,9 @@ instead of horizontally. */
       display: block;
       text-align: left;
     }
+    .namedish div{
+        display: block;
+        }
   }
+
+ 

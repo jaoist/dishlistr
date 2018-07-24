@@ -1,4 +1,4 @@
-// Nav behavior.
+// Nav behavior. Toggles nav menu expansion by adding the "responsive" class.
 
 function expandMenu() {
     var x = document.getElementById("main-nav");
