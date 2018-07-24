@@ -1,2 +1,2 @@
 # dishlistr
-A meal planning service with smart, dynamic suggestions
+A meal planning service with smart, dynamic suggestions.
