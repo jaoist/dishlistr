@@ -10,6 +10,8 @@ function expandMenu() {
 }
 
 
+// Function for creating an html fragment.
+
 function createFrag(htmlStr) {
     var frag = document.createDocumentFragment(),
         temp = document.createElement('div');
@@ -19,6 +21,9 @@ function createFrag(htmlStr) {
     }
     return frag;
 }
+
+// Append html fragment into new div, add class, append to first element in
+// 'ingredients' class.
 
 function addIngredient (){
 
